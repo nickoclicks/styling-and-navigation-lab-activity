@@ -50,7 +50,7 @@ function LoginScreen(props) {
           style={{ color: "purple" }}
           onPress={() => props.navigation.navigate("Signup")}
         >
-          Signup
+          Signup.
         </Text>
       </Text>
     </View>
@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
   },
   passl: {
     marginTop: 10,
+    height: 40,
+    width: "50%",
   },
   forgot: {
     color: "purple",
@@ -80,6 +82,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "1000",
     marginBottom: 20,
+  },
+  emaill: {
+    height: 40,
+    width: "50%",
   },
 });
 

@@ -10,10 +10,15 @@ import LandingScreen from "./src/landing";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          style={styles.headhome}
+        />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Recovery" component={RecoveryScreen} />
@@ -29,5 +34,9 @@ const styles = StyleSheet.create({
     backgroundColor: "yellow",
     alignItems: "center",
     justifyContent: "center",
+  },
+  headhome: {
+    backgroundColor: "#05445E",
+    color: "blue",
   },
 });

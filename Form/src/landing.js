@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   grt: {
     color: "purple",
     fontSize: 20,
-    fontWeight: "1000",
+    fontWeight: "900",
     textAlign: "center",
   },
   logout: {

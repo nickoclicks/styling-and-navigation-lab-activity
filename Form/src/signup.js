@@ -44,6 +44,15 @@ function SignupScreen(props) {
       >
         SIGNUP
       </Button>
+      <Text>
+        Already have an account?
+        <Text
+          style={{ color: "purple" }}
+          onPress={() => props.navigation.navigate("Login")}
+        >
+          Login.
+        </Text>
+      </Text>
     </View>
   );
 }
@@ -57,17 +66,26 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: "50%",
     backgroundColor: "#05445E",
+    height: 40,
   },
   passl: {
     marginTop: 10,
+    height: 40,
+    width: "50%",
+  },
+  emaill: {
+    height: 40,
+    width: "50%",
   },
   usernames: {
     marginBottom: 10,
+    height: 40,
+    width: "50%",
   },
   create: {
     color: "purple",
     fontSize: 30,
-    fontWeight: "1000",
+    fontWeight: "900",
     marginBottom: 20,
   },
 });

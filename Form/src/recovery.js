@@ -30,7 +30,7 @@ function RecoveryScreen(props) {
         mode="contained"
         onPress={() => console.log("Pressed")}
       >
-        SEND RESET CODE
+        SEND CODE
       </Button>
       <Text
         style={styles.back}
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
   reset: {
-    width: "70%",
+    width: "50%",
     marginTop: 15,
     backgroundColor: "#05445E",
   },
@@ -61,6 +61,8 @@ const styles = StyleSheet.create({
   },
   passl: {
     marginTop: 10,
+    height: 40,
+    width: "50%",
   },
   forgot: {
     color: "purple",

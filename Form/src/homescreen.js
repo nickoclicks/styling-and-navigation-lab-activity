@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   team: {
     color: "purple",
     fontSize: 30,
-    fontWeight: "1000",
+    fontWeight: "900",
   },
   par: {
     color: "black",
