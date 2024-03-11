@@ -1,11 +1,14 @@
 import * as React from "react";
-import { View, text, Image, StyleSheet, Text } from "react-native";
+import { View, text, Image, StyleSheet, Text, Keyboard } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Button } from "react-native-paper";
 import logo from "../../Form/assets/logo.png";
 import { TextInput } from "react-native-paper";
+
+
 function LoginScreen(props) {
+  const [showPassword, setShowPassword] = React.useState(false);
   console.log(props);
   return (
     <View
@@ -26,7 +29,18 @@ function LoginScreen(props) {
       />
       <TextInput
         style={styles.passl}
+        placeholder="Password"
         label="Password"
+        secureTextEntry = {!showPassword}
+        right = {
+          <TextInput.Icon
+          icon={showPassword ? "eye" : "eye-off"}
+          onPress={()=>{
+            Keyboard.dismiss;
+            setShowPassword(!showPassword);
+        }}
+        />
+      }
         value={text}
         onChangeText={(text) => setText(text)}
       />
@@ -81,6 +95,9 @@ const styles = StyleSheet.create({
     fontWeight: "1000",
     marginBottom: 20,
   },
+  emaill: {
+    width: 260
+  }
 });
 
 export default LoginScreen;

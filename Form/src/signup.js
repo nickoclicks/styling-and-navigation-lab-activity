@@ -6,6 +6,7 @@ import { Button } from "react-native-paper";
 import logo from "../../Form/assets/logo.png";
 import { TextInput } from "react-native-paper";
 function SignupScreen(props) {
+  const [showPassword, setShowPassword] = React.useState(false);
   console.log(props);
   return (
     <View
@@ -33,14 +34,26 @@ function SignupScreen(props) {
       <TextInput
         style={styles.passl}
         label="Password"
+        placeholder="Password"
+        secureTextEntry = {!showPassword}
+        right = {
+          <TextInput.Icon
+          icon={showPassword ? "eye" : "eye-off"}
+          onPress={()=>{
+            Keyboard.dismiss;
+            setShowPassword(!showPassword);
+          }}
+          />
+        }
         value={text}
         onChangeText={(text) => setText(text)}
+        
       />
       <Button
         style={styles.login}
         icon="login"
         mode="contained"
-        onPress={() => console.log("Pressed")}
+        onPress={() => props.navigation.navigate("Login")}
       >
         SIGNUP
       </Button>
@@ -63,6 +76,7 @@ const styles = StyleSheet.create({
   },
   usernames: {
     marginBottom: 10,
+    width: 260
   },
   create: {
     color: "purple",
@@ -70,6 +84,9 @@ const styles = StyleSheet.create({
     fontWeight: "1000",
     marginBottom: 20,
   },
+  emaill: {
+    width: 260
+  }
 });
 
 export default SignupScreen;
