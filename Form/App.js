@@ -9,6 +9,7 @@ import RecoveryScreen from "./src/recovery";
 import LandingScreen from "./src/landing";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import Categories from "./src/categories";
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -36,7 +37,7 @@ function MyTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={LandingScreen} />
-      <Tab.Screen name="Notification" component={LoginScreen} />
+      <Tab.Screen name="Categories" component={Categories} />
       <Tab.Screen name="Text" component={RecoveryScreen} />
     </Tab.Navigator>
   );

@@ -7,11 +7,10 @@ import logo from "../../Form/assets/logo.png";
 import shirt from "../../Form/assets/shirt.webp";
 import jacket from "../../Form/assets/jacket.webp";
 import pants from "../../Form/assets/pants.webp";
-import Shirtdetails from "./shirtdetails";
 import { TextInput } from "react-native-paper";
 
 
-function LandingScreen(props) {
+function Categories(props) {
   console.log(props);
   return (
     
@@ -26,7 +25,7 @@ function LandingScreen(props) {
       }}
     >
       <Image source={shirt} style={styles.logo} />
-      <Text style={styles.grt} onPress={() => props.navigation.navigate("Shirtdetails")}>T-Shirts</Text>
+      <Text style={styles.grt}>Nigga</Text>
       <Image source={jacket} style={styles.logo} />
       <Text style={styles.grt}>Jackets</Text>
       <Image source={pants} style={styles.logo} />
@@ -68,4 +67,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LandingScreen;
+export default Categories;

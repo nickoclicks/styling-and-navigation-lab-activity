@@ -7,11 +7,10 @@ import logo from "../../Form/assets/logo.png";
 import shirt from "../../Form/assets/shirt.webp";
 import jacket from "../../Form/assets/jacket.webp";
 import pants from "../../Form/assets/pants.webp";
-import Shirtdetails from "./shirtdetails";
 import { TextInput } from "react-native-paper";
 
 
-function LandingScreen(props) {
+function Shirtdetails(props) {
   console.log(props);
   return (
     
@@ -26,12 +25,10 @@ function LandingScreen(props) {
       }}
     >
       <Image source={shirt} style={styles.logo} />
-      <Text style={styles.grt} onPress={() => props.navigation.navigate("Shirtdetails")}>T-Shirts</Text>
-      <Image source={jacket} style={styles.logo} />
-      <Text style={styles.grt}>Jackets</Text>
-      <Image source={pants} style={styles.logo} />
-      <Text style={styles.grt}>Pants</Text>
-      
+      <Text style={styles.grt}>T-Shirts</Text>
+      <Text>A shirt is a cloth garment for the upper body (from the neck to the waist).
+
+Originally an undergarment worn exclusively by men, it has become, in American English, a catch-all term for a broad variety of upper-body garments and undergarments. In British English, a shirt is more specifically a garment with a collar, sleeves with cuffs, and a full vertical opening with buttons or snaps (North Americans would call that a "dress shirt", a specific type of collared shirt). A shirt can also be worn with a necktie under the shirt collar.</Text>
     </View>
     </ScrollView>
    
@@ -68,4 +65,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LandingScreen;
+export default Shirtdetails;
