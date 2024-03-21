@@ -10,6 +10,7 @@ import LandingScreen from "./src/landing";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Categories from "./src/categories";
+import Shirtdetails from "./src/shirtdetails";
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Recovery" component={RecoveryScreen} />
+        <Stack.Screen name="Shirtdetails" component={Shirtdetails} options={{ headerShown: false }} />
         <Stack.Screen
           name="Landing"
           component={MyDrawer}
