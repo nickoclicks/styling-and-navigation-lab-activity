@@ -24,7 +24,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Recovery" component={RecoveryScreen} />
-        <Stack.Screen name="Shirtdetails" component={Shirtdetails} options={{ headerShown: false }} />
+        <Stack.Screen name="Shirtdetails" component={Shirtdetails} />
         <Stack.Screen
           name="Landing"
           component={MyDrawer}
