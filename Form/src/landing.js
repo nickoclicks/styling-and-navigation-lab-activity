@@ -22,6 +22,14 @@ import Categories from "./categories";
 import HomeScreen from "./homescreen";
 import Shirtdetails from "./shirtdetails";
 import Logos from "../../Form/assets/logo1.png";
+import Carousel from "pinar";
+
+const images = [
+  {
+    name: "exterior",
+    img: require("../../Form/assets/logo1.png"),
+  },
+];
 
 function LandingScreen(props) {
   console.log(props);
@@ -31,11 +39,16 @@ function LandingScreen(props) {
         style={{
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "black",
+          backgroundColor: "#fdbd02",
 
           flex: 1,
         }}
       >
+        <Carousel style={styles.carousel} showsControls={false}>
+          {images.map((img) => (
+            <Image style={styles.image} source={img.img} key={img.name} />
+          ))}
+        </Carousel>
         <Image source={Logos} style={styles.logo1} />
         <TouchableOpacity
           onPress={() => props.navigation.navigate(Shirtdetails)}
@@ -121,6 +134,14 @@ const styles = StyleSheet.create({
     width: "50%",
     marginTop: 10,
     backgroundColor: "#05445E",
+  },
+  carousel: {
+    height: "10%",
+    width: "30%",
+  },
+  image: {
+    height: 300,
+    width: 300,
   },
 });
 

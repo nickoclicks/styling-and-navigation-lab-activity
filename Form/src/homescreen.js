@@ -5,7 +5,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Button } from "react-native-paper";
 import logo from "../../Form/assets/logo.png";
 function HomeScreen(props) {
-  
   console.log(props);
   return (
     <View
@@ -13,7 +12,7 @@ function HomeScreen(props) {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#75E6DA",
+        backgroundColor: "#fdbd02",
       }}
     >
       <Image source={logo} style={styles.logo} />
