@@ -49,11 +49,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#080c16"
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+    color: "white"
   },
   filterButton: {
     padding: 10,
@@ -67,6 +69,7 @@ const styles = StyleSheet.create({
   },
   filterText: {
     fontSize: 16,
+    color: "white"
   },
   applyButton: {
     backgroundColor: "blue",

@@ -10,9 +10,9 @@ import {
 
 const FavoritesPage = () => {
   const [favorites, setFavorites] = useState([
-    { id: 1, imageUrl: require("../../Form/assets/logo.png") },
-    { id: 2, imageUrl: require("../../Form/assets/logo.png") },
-    { id: 3, imageUrl: require("../../Form/assets/logo.png") },
+    { id: 1, imageUrl: require("../../Form/assets/street1.jpg") },
+    { id: 2, imageUrl: require("../../Form/assets/portrait1.jpg") },
+    { id: 3, imageUrl: require("../../Form/assets/wild1.jpg") },
     // Add more favorite photos as needed
   ]);
 
@@ -43,11 +43,13 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
     alignItems: "center",
+    backgroundColor: "#080c16"
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+    color: "white"
   },
   photo: {
     width: 200,

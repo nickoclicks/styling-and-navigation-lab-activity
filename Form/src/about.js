@@ -7,7 +7,7 @@ const AboutUsPage = () => {
       <Text style={styles.title}>About Us</Text>
       <View style={styles.member}>
         <Image
-          source={require("../../Form/assets/logo.png")}
+          source={require("../../Form/assets/nick.jpeg")}
           style={styles.memberImage}
         />
         <View style={styles.memberInfo}>
@@ -17,17 +17,17 @@ const AboutUsPage = () => {
       </View>
       <View style={styles.member}>
         <Image
-          source={require("../../Form/assets/logo.png")}
+          source={require("../../Form/assets/ari.jpg")}
           style={styles.memberImage}
         />
         <View style={styles.memberInfo}>
           <Text style={styles.memberName}>Ariel Jay Pahuyo</Text>
           <Text style={styles.memberRole}>Assistant Photographer</Text>
         </View>
-      </View>
+      </View> 
       <View style={styles.member}>
         <Image
-          source={require("../../Form/assets/logo.png")}
+          source={require("../../Form/assets/igor.jpg")}
           style={styles.memberImage}
         />
         <View style={styles.memberInfo}>
@@ -43,11 +43,13 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
+    backgroundColor: "#080c16"
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+    color: "white"
   },
   member: {
     flexDirection: "row",
@@ -66,10 +68,12 @@ const styles = StyleSheet.create({
   memberName: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "white"
   },
   memberRole: {
     fontSize: 16,
     color: "#666",
+    color: "white"
   },
 });
 

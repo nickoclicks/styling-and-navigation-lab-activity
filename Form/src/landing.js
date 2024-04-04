@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
+    backgroundColor: "#080c16"
   },
   image: {
     width: "100%",
@@ -64,11 +65,14 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 10,
+    color: "white",
+    textAlign: "center"
   },
   description: {
     fontSize: 18,
     textAlign: "center",
     marginBottom: 20,
+    color: "white"
   },
   button: {
     backgroundColor: "#007bff",

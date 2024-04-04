@@ -12,7 +12,7 @@ function HomeScreen(props) {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fdbd02",
+        backgroundColor: "#080c16",
       }}
     >
       <Image source={logo} style={styles.logo} />
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontWeight: "1000",
   },
   par: {
-    color: "black",
+    color: "white",
     fontSize: 15,
     fontWeight: "600",
     marginBottom: 10,

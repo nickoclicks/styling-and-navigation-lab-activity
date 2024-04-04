@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 10,
     paddingTop: 20,
+    backgroundColor: "#080c16"
   },
   categoryItem: {
     flex: 1,
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    color: "white"
   },
 });
 

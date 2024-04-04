@@ -25,11 +25,13 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
+    backgroundColor: "#080c16"
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+    color: "white"
   },
   contactInfo: {
     marginBottom: 15,
@@ -38,9 +40,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 5,
+    color: "white"
   },
   info: {
     fontSize: 16,
+    color: "white"
   },
 });
 

@@ -16,7 +16,7 @@ function LoginScreen(props) {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#75E6DA",
+        backgroundColor: "#080c16",
       }}
     >
       <Image source={logo} style={styles.logo} />
@@ -58,11 +58,11 @@ function LoginScreen(props) {
       >
         LOGIN
       </Button>
-      <Text>
+      <Text style={{ color: 'white'}}>
         Don't have an account?
         <Text
           style={{ color: "purple" }}
-          onPress={() => props.navigation.navigate("Signup")}
+          onPress={() => props.navigation.navigate(" Signup")}
         >
           Signup
         </Text>

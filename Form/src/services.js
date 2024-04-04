@@ -24,7 +24,6 @@ const ServicesPage = () => {
           Showcase your products with high-quality product photography services.
         </Text>
       </View>
-      {/* Add more services as needed */}
     </ScrollView>
   );
 };
@@ -33,11 +32,13 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
+    backgroundColor: "#080c16"
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
+    color: "white"
   },
   service: {
     marginBottom: 20,
@@ -46,9 +47,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 5,
+    color: "white"
   },
   serviceDescription: {
     fontSize: 16,
+    color: "white"
   },
 });
 

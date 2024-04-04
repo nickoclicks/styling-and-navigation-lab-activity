@@ -29,9 +29,9 @@ const { width } = Dimensions.get("window");
 function Landscapecat() {
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContainer}>
-      {/* Logo */}
+     
       <Image source={Logos} style={styles.logo} />
-      {/* Photo Grid */}
+      
       <View style={styles.photoGrid}>
         <Image
           source={{
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: width,
-    height: 50, // Adjust height as per your logo's aspect ratio
+    height: 50,
     resizeMode: "contain",
   },
   photoGrid: {
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
   },
   image: {
-    width: width / 2 - 10, // Adjust spacing according to your preference
+    width: width / 2 - 10,
     height: width / 2 - 10,
     marginVertical: 5,
     resizeMode: "cover",

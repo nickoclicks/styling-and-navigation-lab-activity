@@ -47,7 +47,7 @@ export default function App() {
 function MyTabs() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={LandingScreen} />
+      <Tab.Screen name="Home" component={LandingScreen}  />
       <Tab.Screen name="Categories" component={CategoriesScreen} />
       <Tab.Screen name="Favorites" component={FavoritesPage} />
     </Tab.Navigator>
@@ -56,7 +56,7 @@ function MyTabs() {
 
 function MyDrawer() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions= { { drawerStyle: { backgroundColor: 'white' }}} >
       <Drawer.Screen name="Home" component={MyTabs} />
       <Drawer.Screen name="Services" component={ServicesPage} />
       <Drawer.Screen name="Filters" component={FilterPage} />
