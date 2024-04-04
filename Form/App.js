@@ -11,6 +11,13 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import CategoriesScreen from "./src/categories";
 import Shirtdetails from "./src/shirtdetails";
+import Landscapecat from "./src/landscapecat";
+import Portraitcat from "./src/portraitcat";
+import ServicesPage from "./src/services";
+import AboutUsPage from "./src/about";
+import ContactPage from "./src/contact";
+import FilterPage from "./src/filter";
+import FavoritesPage from "./src/favorites";
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -19,11 +26,13 @@ const Tab = createMaterialBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="LandingScreen">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Recovery" component={RecoveryScreen} />
+        <Stack.Screen name="Landscapecat" component={Landscapecat} />
+        <Stack.Screen name="Portraitcat" component={Portraitcat} />
         <Stack.Screen name="Shirtdetails" component={Shirtdetails} />
         <Stack.Screen
           name="Landing"
@@ -40,7 +49,7 @@ function MyTabs() {
     <Tab.Navigator>
       <Tab.Screen name="Home" component={LandingScreen} />
       <Tab.Screen name="Categories" component={CategoriesScreen} />
-      <Tab.Screen name="Text" component={CategoriesScreen} />
+      <Tab.Screen name="Favorites" component={FavoritesPage} />
     </Tab.Navigator>
   );
 }
@@ -49,10 +58,10 @@ function MyDrawer() {
   return (
     <Drawer.Navigator>
       <Drawer.Screen name="Home" component={MyTabs} />
-      <Drawer.Screen name="Services" component={HomeScreen} />
-      <Drawer.Screen name="Filters" component={RecoveryScreen} />
-      <Drawer.Screen name="About Us" component={LandingScreen} />
-      <Drawer.Screen name="Contact" component={SignupScreen} />
+      <Drawer.Screen name="Services" component={ServicesPage} />
+      <Drawer.Screen name="Filters" component={FilterPage} />
+      <Drawer.Screen name="About Us" component={AboutUsPage} />
+      <Drawer.Screen name="Contact" component={ContactPage} />
     </Drawer.Navigator>
   );
 }

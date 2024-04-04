@@ -9,6 +9,7 @@ import {
   ScrollView,
   TouchableOpacity,
   Windows,
+  Dimensions,
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -22,126 +23,63 @@ import Categories from "./categories";
 import HomeScreen from "./homescreen";
 import Shirtdetails from "./shirtdetails";
 import Logos from "../../Form/assets/logo1.png";
-import Carousel from "pinar";
 
-const images = [
-  {
-    name: "exterior",
-    img: require("../../Form/assets/logo1.png"),
-  },
-];
+const { width } = Dimensions.get("window");
 
 function LandingScreen(props) {
-  console.log(props);
   return (
-    <ScrollView>
-      <View
-        style={{
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#fdbd02",
-
-          flex: 1,
-        }}
+    <View style={styles.container}>
+      <Image
+        source={require("../../Form/assets/logo1.png")}
+        style={styles.image}
+      />
+      <Text style={styles.title}>Welcome to Original IGN Photography Hub</Text>
+      <Text style={styles.description}>
+        Discover the art and beauty of photography.
+      </Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => props.navigation.navigate("Categories")}
       >
-        <Carousel style={styles.carousel} showsControls={false}>
-          {images.map((img) => (
-            <Image style={styles.image} source={img.img} key={img.name} />
-          ))}
-        </Carousel>
-        <Image source={Logos} style={styles.logo1} />
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate(Shirtdetails)}
-        >
-          <Image source={shirt} style={styles.logo} />
-          <Text style={styles.shirts}>Shirt</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate(Shirtdetails)}
-        >
-          <Image source={jacket} style={styles.logo2} />
-          <Text style={styles.jackets}>Jackets</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate(Shirtdetails)}
-        >
-          <Image source={pants} style={styles.logo3} />
-          <Text style={styles.grt}>Pants</Text>
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+        <Text style={styles.buttonText}>Explore Categories</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  logo: {
-    height: 200,
-    width: 200,
-    marginRight: 30,
-    marginTop: 30,
-    flexDirection: "row",
-  },
-  logo2: {
-    height: 200,
-    width: 200,
-    marginTop: 30,
-    marginRight: 30,
-    flexDirection: "row",
-  },
-  logo3: {
-    height: 200,
-    width: 200,
-    marginTop: 30,
-    flexDirection: "row",
-  },
-  logo1: {
-    height: 100,
-    width: 370,
-  },
-  login: {
-    marginTop: 10,
-    width: "50%",
-  },
-  passl: {
-    marginTop: 10,
-  },
-  forgot: {
-    color: "purple",
-    fontSize: 10,
-    textAlign: "right",
-  },
-  shirts: {
-    color: "purple",
-    fontSize: 15,
-    fontWeight: "700",
-    textAlign: "center",
-    marginRight: 18,
-  },
-  jackets: {
-    color: "purple",
-    fontSize: 15,
-    fontWeight: "700",
-    textAlign: "center",
-    marginRight: 27,
-  },
-  grt: {
-    color: "purple",
-    fontSize: 15,
-    fontWeight: "700",
-    textAlign: "center",
-  },
-  logout: {
-    width: "50%",
-    marginTop: 10,
-    backgroundColor: "#05445E",
-  },
-  carousel: {
-    height: "10%",
-    width: "30%",
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
   },
   image: {
-    height: 300,
-    width: 300,
+    width: "100%",
+    height: 100,
+    resizeMode: "cover",
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 10,
+  },
+  description: {
+    fontSize: 18,
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: "#007bff",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
 
